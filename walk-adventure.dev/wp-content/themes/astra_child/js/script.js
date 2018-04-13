@@ -20,7 +20,6 @@ jQuery(document).ready(function() {
 
 
 
-
 //    jQuery.ajax({
 //      url:"get_stylesheet_directory_uri(). 'functions.php'",
 //      type:"POST"
