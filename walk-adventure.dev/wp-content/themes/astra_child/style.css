@@ -1,0 +1,12 @@
+/*
+Theme Name: astra_child
+Description: Дочерняя тема для темы astra
+Author: Ваше имя
+Template: astra
+*/
+
+@import url("../astra/style.css");
+
+#site-title a {
+    color: #009900;
+}
