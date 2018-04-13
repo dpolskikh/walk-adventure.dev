@@ -6,7 +6,7 @@ function my_scripts_method() {
 		get_stylesheet_directory_uri() . '/js/jquery.min.js');
     wp_enqueue_script( 'jquery' );
 }
-//4
+//5
 add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
 
 //Подключение скрипта
