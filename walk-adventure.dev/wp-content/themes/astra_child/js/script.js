@@ -10,6 +10,7 @@ jQuery(document).ready(function() {
     //if then else
     if (l_code == '') { //
       alert("Значение не задано");
+      jQuery().append
     } else {
       alert(l_code);
     };
