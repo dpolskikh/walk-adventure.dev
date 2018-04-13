@@ -13,7 +13,8 @@ add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
 function script () {wp_enqueue_script('script', get_stylesheet_directory_uri(). '/js/script.js');
 }
 //Добавление шорткода
-add_shortcode( 'script', 'script');
+add_action( 'wp_enqueue_scripts', 'script' );
+//add_shortcode( 'script', 'script');
 
 //Подключение стилей родительской темы
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
