@@ -5,19 +5,23 @@ jQuery(document).ready(function() {
   //Обработка нажатия кнопки id
   jQuery("#id3").click(function() {
     var l_code;
+    var result;
+    var user;
     //Считать переменную
     l_code = jQuery('#id1').val();
     //if then else
     if (l_code == '') { //
-      alert("Значение не задано");
+      //alert("Значение не задано");
+      jQuery('#status').empty();
+      jQuery('#status').append("Введите код доступа");
     } else {
             //alert(l_code);
             jQuery.ajax({
-              url: "/walk-adventure.dev/wp-content/themes/astra_child/user_code_pr.php",
+              url: "/walk-adventure.dev/wp-content/themes/astra_child/user_code_pr.php", //необходимо заменить функцией получающая ссылку
               //"<?php echo get_stylesheet_directory_uri() . '/json_gallery_data.php'; ?>"
               type:"POST",  //или "GET"
-              data:({l_code}),     //переменные
-              dataType:"html",
+              data:({l_code,result,user}),     //переменные
+              dataType:"html",     //тип передаваемых данных
               beforeSend: funcBefore,  //функция во время загрузки php
               success: funcSuccess     //функция после успешного выполнения php
             });
@@ -34,6 +38,9 @@ function funcSuccess(data){
 jQuery("#status").text(data);
 }
 
+function ddd (){
+
+}
 
 
 

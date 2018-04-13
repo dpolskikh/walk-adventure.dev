@@ -30,4 +30,7 @@ function my_theme_enqueue_styles() {
         wp_get_theme()->get('Version')
     );
 }
+//Логины базы данных
+//require_once get_stylesheet_directory_uri(). '/db_connect.php';
+
 ?>
