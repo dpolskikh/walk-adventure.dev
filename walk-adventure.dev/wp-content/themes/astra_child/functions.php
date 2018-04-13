@@ -1,19 +1,20 @@
 <?php
 //<script type="text/javascript" scr="/walk-adventure.dev/wp-content/themes/astra_child/js/jquery-3.3.1.min.js"></script>;
+//Подключение библиотеки jQuery
 function my_scripts_method() {
     wp_deregister_script( 'jquery' );
     wp_register_script( 'jquery',
 		get_stylesheet_directory_uri() . '/js/jquery.min.js');
     wp_enqueue_script( 'jquery' );
 }
-//5
 add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
 
 //Подключение скрипта
 function script () {wp_enqueue_script('script', get_stylesheet_directory_uri(). '/js/script.js');
 }
-//Добавление шорткода
 add_action( 'wp_enqueue_scripts', 'script' );
+
+//Добавление шорткода
 //add_shortcode( 'script', 'script');
 
 //Подключение стилей родительской темы
